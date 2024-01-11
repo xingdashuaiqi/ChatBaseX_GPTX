@@ -58,7 +58,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-contract MerkleTreeContract {
+contract AIXCenter {
     address public owner;
     // 使用 IERC20 接口声明 tokenAIX 变量
     IERC20 public tokenAIX;
@@ -67,7 +67,7 @@ contract MerkleTreeContract {
   tokenAIX = IERC20(_token);
 }
 
-    function processMerkleRoot(address[] calldata addresses, uint256[] calldata amounts) external {
+    function AIXTransfer(address[] calldata addresses, uint256[] calldata amounts) external {
         require(msg.sender == owner,"");
         for (uint256 i = 0; i < addresses.length; i++) {
             transfertoken(addresses[i],amounts[i]);
@@ -76,5 +76,10 @@ contract MerkleTreeContract {
     function transfertoken(address _address,uint256 _amount)internal {
             tokenAIX.transfer(_address,_amount);
     }
+function Dithdraw(uint256 _amount)external{
+require(msg.sender == owner,"")
+tokenAIX.transfer(owner,_amount);
+
+}
     }
 
