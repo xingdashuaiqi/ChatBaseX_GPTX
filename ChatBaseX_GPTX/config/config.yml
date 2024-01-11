@@ -1,0 +1,12 @@
+Database:
+  DbType: mysql  #数据库类型
+  DbName: ai  #数据库名称
+  Host:  8.136.233.221:3306
+  Username: root #用户名
+  Pwd: hackeryoumotherboom #数据库密码
+  Charset: utf8  #数据库编码
+  ParseTime: True
+Contract:
+  ContractAddress: "0x123456789abcdef"  # 合约地址
+  ContractAbi: ""  # 合约abi
+  URL: ""  # 合约URL
